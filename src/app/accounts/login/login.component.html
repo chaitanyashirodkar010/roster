@@ -1,0 +1,42 @@
+<main class="form w-100 m-auto">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <img class="mb-4" src="../../../assets/images/adaniportslogo.svg" alt="" width="194px" height="77px">
+        <h1>Roster Portal</h1>
+        <h6>Login to your account</h6>
+
+
+        <!-- Email -->
+
+        <div class="">
+            <label for="floatingInput">Email address</label>
+            <input type="email" class="form-control" id="floatingInput" formControlName="emailAddress">
+            <span *ngIf="loginForm.controls['emailAddress'].errors?.['required']">Please enter email</span>
+            <span *ngIf="loginForm.controls['emailAddress'].errors?.['email']">Please enter valid email</span>
+        </div>
+
+
+        <!-- password -->
+        <div class="">
+            <label for="floatingPassword">Password</label>
+            <input type="password" class="form-control" id="floatingPassword" formControlName="loginpassword">
+            <span *ngIf="loginForm.controls['loginpassword'].errors?.['required']">Please enter Password</span>
+            <div *ngIf="loginForm.controls['loginpassword'].errors?.['pattern']">Your password must be have at least
+
+                <ul>
+                    <li>8 characters long</li>
+                    <li>1 uppercase & 1 lowercase character</li>
+                    <li>1 number</li>
+                </ul>
+            </div>
+        </div>
+
+        <button class="btn btn-primary w-100 py-2" type="submit">LOGIN</button>
+
+
+        <a class="d-flex justify-content-end text-white" routerLink="/forgot-password">Forgot Password?</a>
+
+
+        <p class="mt-5 mb-3 text-body-secondary">By continuing, you’re confirming that you’ve read our Terms & Condition
+            and Cookie Policy</p>
+    </form>
+</main>
