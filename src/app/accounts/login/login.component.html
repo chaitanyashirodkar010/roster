@@ -1,24 +1,26 @@
-<main class="form w-100 m-auto">
+<main class="form w-100 m-auto py-5">
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-        <img class="mb-4" src="../../../assets/images/adaniportslogo.svg" alt="" width="194px" height="77px">
+        <div class="img">
+            <img class="mb-4" src="../../../assets/images/adaniportslogo.svg" alt="" width="194px" height="77px">
+        </div>
         <h1>Roster Portal</h1>
         <h6>Login to your account</h6>
 
 
         <!-- Email -->
-
+        <br><br>
         <div class="">
             <label for="floatingInput">Email address</label>
-            <input type="email" class="form-control" id="floatingInput" formControlName="emailAddress">
+            <input type="email" class="form-control mb-1" id="floatingInput" formControlName="emailAddress">
             <span *ngIf="loginForm.controls['emailAddress'].errors?.['required']">Please enter email</span>
-            <span *ngIf="loginForm.controls['emailAddress'].errors?.['email']">Please enter valid email</span>
+            <div *ngIf="loginForm.controls['emailAddress'].errors?.['email']">Please enter valid email</div>
         </div>
 
 
         <!-- password -->
-        <div class="">
+        <div class="mt-5">
             <label for="floatingPassword">Password</label>
-            <input type="password" class="form-control" id="floatingPassword" formControlName="loginpassword">
+            <input type="password" class="form-control mb-1" id="floatingPassword" formControlName="loginpassword">
             <span *ngIf="loginForm.controls['loginpassword'].errors?.['required']">Please enter Password</span>
             <div *ngIf="loginForm.controls['loginpassword'].errors?.['pattern']">Your password must be have at least
 
@@ -30,13 +32,13 @@
             </div>
         </div>
 
-        <button class="btn btn-primary w-100 py-2" type="submit">LOGIN</button>
+        <button class="btn btn-primary w-100 py-2 my-5" type="submit">LOGIN<img src="../../../assets/images/ep_arrow-left-bold.svg"></button>
 
 
         <a class="d-flex justify-content-end text-white" (click)="forgotPassword()">Forgot Password?</a>
 
 
-        <p class="mt-5 mb-3 text-body-secondary">By continuing, you’re confirming that you’ve read our Terms & Condition
+        <p class="mt-5 mb-3 text-white">By continuing, you’re confirming that you’ve read our Terms & Condition
             and Cookie Policy</p>
     </form>
 </main>
