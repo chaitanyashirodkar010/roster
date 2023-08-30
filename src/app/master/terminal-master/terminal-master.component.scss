@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Poppins:wght@400;600&family=Roboto:wght@500;700&display=swap');
+
+.card {
+    width: 100%;
+    border-radius: 5px 5px 0px 0px;
+    background: #FFF;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+p {
+    color: #003465;
+    font-size: 16px;
+    font-weight: 600;
+    background: rgba(11, 116, 176, 0.06);
+}
+
+input {
+    width: 100%;
+
+    border-radius: 10px;
+    border: 2px solid #E4E4E4;
+    background: #FFF;
+}
+
+select {
+    width: 100%;
+    
+    border-radius: 10px;
+    border: 2px solid #E4E4E4;
+    background: #FFF;
+}
+
+label {
+    color: #3B3B3B;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+button {
+    color: #FFF;
+    border: 0px;
+    border-radius: 5px;
+
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.add-btn {
+    background: #0B74B0;
+}
+
+.search-btn {
+    background: #9A207B;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+    background-color: #FFF;
+}
+
+th {
+    color: #003A6F;
+    font-size: 16px;
+    font-weight: 600;
+
+    background: #EAF1FB;
+}
+
+tr {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.22);
+    background: rgba(255, 255, 255, 0.20);
+
+}
+
+td {
+    color: #000;
+    font-size: 14px;
+    font-weight: 400;
+}
