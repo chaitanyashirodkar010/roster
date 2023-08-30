@@ -11,12 +11,22 @@ body {
 
 
 main.form {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0.08) 100%);
+    box-shadow: 1px 1px 32px 1px rgba(0, 0, 0, 0.25);
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    max-width: 592px;
+    padding: 55px;
+    text-align: center;
 
     & * {
         color: $black;
+    }
+
+    .img {
+        display: inline-block;
     }
 
     h1 {
@@ -29,26 +39,21 @@ main.form {
         font-weight: 600;
     }
 
-    form {
-        background: white;
-        box-shadow: 1px 1px 32px 1px rgba(0, 0, 0, 0.25);
-        width: 100%;
-        max-width: 592px;
-        padding: 55px;
-        text-align: center;
+    .btn {
+        font-size: 18px;
+        font-weight: 600;
+    }
 
-        input {
-            height: 42px;
-            text-align: left;
-        }
+    input {
+        height: 42px;
+        text-align: left;
+    }
 
-        label,
-        span {
-            font-size: 16px;
-            font-weight: 600;
-            text-align: left;
-            display: block;
-            margin-bottom: 10px;
-        }
+    label,
+    span {
+        font-weight: 600;
+        text-align: left;
+        display: block;
+        margin-bottom: 10px;
     }
 }
