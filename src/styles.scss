@@ -22,7 +22,7 @@ main.form {
     text-align: center;
 
     & * {
-        color: $black;
+        color: #fff;
     }
 
     .img {
@@ -40,6 +40,7 @@ main.form {
     }
 
     .btn {
+        background-color: #0B74B0;
         font-size: 18px;
         font-weight: 600;
     }
@@ -49,11 +50,19 @@ main.form {
         text-align: left;
     }
 
+    .bkl {
+        text-decoration: none;
+    }
+
     label,
     span {
         font-weight: 600;
         text-align: left;
         display: block;
         margin-bottom: 10px;
+    }
+
+    p {
+        font-weight: 600;
     }
 }

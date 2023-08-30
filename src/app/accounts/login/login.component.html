@@ -12,8 +12,8 @@
         <div class="">
             <label for="floatingInput">Email address</label>
             <input type="email" class="form-control mb-1" id="floatingInput" formControlName="emailAddress">
-            <span *ngIf="loginForm.controls['emailAddress'].errors?.['required']">Please enter email</span>
-            <div *ngIf="loginForm.controls['emailAddress'].errors?.['email']">Please enter valid email</div>
+            <span *ngIf="loginForm.controls['emailAddress'].touched && loginForm.controls['emailAddress'].errors?.['required']">Please enter email</span>
+            <div *ngIf="loginForm.controls['emailAddress'].touched && loginForm.controls['emailAddress'].errors?.['email']">Please enter valid email</div>
         </div>
 
 
@@ -21,8 +21,8 @@
         <div class="mt-5">
             <label for="floatingPassword">Password</label>
             <input type="password" class="form-control mb-1" id="floatingPassword" formControlName="loginpassword">
-            <span *ngIf="loginForm.controls['loginpassword'].errors?.['required']">Please enter Password</span>
-            <div *ngIf="loginForm.controls['loginpassword'].errors?.['pattern']">Your password must be have at least
+            <span *ngIf="loginForm.controls['loginpassword'].touched && loginForm.controls['loginpassword'].errors?.['required']">Please enter Password</span>
+            <div *ngIf="loginForm.controls['loginpassword'].touched && loginForm.controls['loginpassword'].errors?.['pattern']">Your password must be have at least
 
                 <ul>
                     <li>8 characters long</li>
@@ -35,7 +35,7 @@
         <button class="btn btn-primary w-100 py-2 my-5" type="submit">LOGIN<img src="../../../assets/images/ep_arrow-left-bold.svg"></button>
 
 
-        <a class="d-flex justify-content-end text-white" (click)="forgotPassword()">Forgot Password?</a>
+        <a class="bkl d-flex justify-content-end text-white" (click)="forgotPassword()">Forgot Password?</a>
 
 
         <p class="mt-5 mb-3 text-white">By continuing, you’re confirming that you’ve read our Terms & Condition
