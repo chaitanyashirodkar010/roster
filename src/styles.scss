@@ -1,4 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+
+$black :#252525;
+
 body {
     background: linear-gradient(100deg, rgba(11, 116, 176, 0.73) 0%, rgba(117, 71, 156, 0.73) 54.59%, rgba(189, 56, 97, 0.73) 100%), url(../src/assets/images/bgimage.png);
     background-size: 100% 100%;
@@ -12,8 +15,11 @@ main.form {
     align-items: center;
     justify-content: center;
 
+    & * {
+        color: $black;
+    }
+
     h1 {
-        color: #FFF;
         font-size: 32px;
         font-weight: 600;
     }
@@ -24,21 +30,25 @@ main.form {
     }
 
     form {
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0.08) 100%);
+        background: white;
         box-shadow: 1px 1px 32px 1px rgba(0, 0, 0, 0.25);
         width: 100%;
         max-width: 592px;
         padding: 55px;
+        text-align: center;
 
         input {
             height: 42px;
-            margin-bottom: 40px;
+            text-align: left;
         }
 
-        label {
-            color: #FFF;
+        label,
+        span {
             font-size: 16px;
             font-weight: 600;
+            text-align: left;
+            display: block;
+            margin-bottom: 10px;
         }
     }
 }
